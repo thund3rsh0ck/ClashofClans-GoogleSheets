@@ -43,10 +43,18 @@ def update_war_stats():
             updates.append([formatted_time, wartype, user, attacked])
 
         # Writing to Google Sheets
+        values = worksheet.get_all_values()
+        # Clear all rows starting from the second row
+        if len(values) > 1:
+            worksheet.delete_rows(2, len(values))
+            print(f"All rows (from row 2) in Botdata tab cleared successfully.")
+        else:
+            print("No rows to clear.")
         for update in updates:
             worksheet.append_row(update)  # Append each row to the sheet
 
         print("Data updated successfully.")
+
         pass
     except gspread.exceptions.SpreadsheetNotFound:
         print("d.")
