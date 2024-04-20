@@ -3,11 +3,17 @@ Connecting Clash of Clans API to Sheets for War Stats and Member Roster
 
 # Setup Instructions
 Step 1: Set Up Google Sheets API
+
 Create a Project on Google Developers Console:
+
 Go to the Google Developers Console.
+
 Create a new project.
+
 Enable the Google Sheets API:
+
 In your project dashboard, navigate to Library, search for "Google Sheets API", and enable it.
+
 Create Credentials:
 In the APIs & Services > Credentials, click Create Credentials and choose Service account.
 Fill out the necessary details. After creating the service account, click on it.
