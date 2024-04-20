@@ -34,13 +34,23 @@ try:
         name = item['name']
         role = item['role']
         tag = item['tag']
+        donations = item['donations']
+        donationsrec = item['donationsReceived']
+        rank = item['clanRank']
+        league = item['league']['name']
 
         # Append the extracted data to our list
-        updates.append([name, role, tag])
+        updates.append([name, role, tag, donations, donationsrec, rank, league])
     # Writing to Google Sheets
+    values = worksheet.get_all_values()
+        # Clear all rows starting from the second row
+    if len(values) > 1:
+        worksheet.delete_rows(2, len(values))
+        print(f"All rows (from row 2) in Rosterv2 tab cleared successfully.")
+    else:
+        print("No rows to clear.")
     for update in updates:
         worksheet.append_row(update)  # Append each row to the sheet
-
     print("Data updated successfully.")
     pass
 except gspread.exceptions.SpreadsheetNotFound:
