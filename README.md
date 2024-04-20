@@ -1,43 +1,39 @@
-# ClashofClans-GoogleSheets
-Connecting Clash of Clans API to Sheets for War Stats and Member Roster
+# Clash of Clans Google Sheets Integration
 
-So far, we have Classic War Tracker and Member roster tracker.
+Connect Clash of Clans API to Google Sheets for War Stats and Member Roster.
 
-# Setup Instructions
-Step 1: Set Up Google Sheets API
+## Features
+- Classic War Tracker
+- Member Roster Tracker
 
-Create a Project on Google Developers Console:
+## Setup Instructions
 
-Go to the Google Developers Console.
+### Step 1: Set Up Google Sheets API
 
-Create a new project.
+1. Create a Project on Google Developers Console:
+   - Go to the [Google Developers Console](https://console.developers.google.com/).
+   - Create a new project.
+   
+2. Enable the Google Sheets API:
+   - In your project dashboard, navigate to Library, search for "Google Sheets API", and enable it.
+   
+3. Create Credentials:
+   - In the APIs & Services > Credentials, click Create Credentials and choose Service account.
+   - Fill out the necessary details. After creating the service account, click on it.
+   - Go to the Keys tab, click on Add Key, and select Create new key. Choose JSON as the key type and download the JSON file. This file contains your credentials.
+   - Save that file as `clash.json`.
+   
+4. Share your Sheet:
+   - Open your Google Sheets document.
+   - Click on the Share button and share it with the `client_email` found in your JSON credentials file, with at least "Editor" permissions.
 
-Enable the Google Sheets API:
-
-In your project dashboard, navigate to Library, search for "Google Sheets API", and enable it.
-
-Create Credentials:
-
-In the APIs & Services > Credentials, click Create Credentials and choose Service account.
-
-Fill out the necessary details. After creating the service account, click on it.
-
-Go to the Keys tab, click on Add Key, and select Create new key. Choose JSON as the key type and download the JSON file. This file contains your credentials.
-
-Save that file as clash.json
-
-Share your Sheet:
-
-Open your Google Sheets document.
-
-Click on the Share button and share it with the client_email found in your JSON credentials file, with at least "Editor" permissions.
-
-Step 2: Install gspread and oauth2client
+### Step 2: Install Dependencies
 
 Install the necessary Python libraries if you haven't already:
+```bash
+pip install gspread oauth2client requests```
 
-```pip install gspread oauth2client requests```
+### Step 3: Configuration
 
-Step 3:
+Finally, change anything between `[ ]` in the Python files to your own.
 
-Finally, change anything between [ ] in the python files to your own.
