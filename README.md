@@ -1,6 +1,8 @@
 # ClashofClans-GoogleSheets
 Connecting Clash of Clans API to Sheets for War Stats and Member Roster
 
+So far, we have Classic War Tracker and Member roster tracker.
+
 # Setup Instructions
 Step 1: Set Up Google Sheets API
 
@@ -22,6 +24,8 @@ Fill out the necessary details. After creating the service account, click on it.
 
 Go to the Keys tab, click on Add Key, and select Create new key. Choose JSON as the key type and download the JSON file. This file contains your credentials.
 
+Save that file as clash.json
+
 Share your Sheet:
 
 Open your Google Sheets document.
@@ -32,4 +36,8 @@ Step 2: Install gspread and oauth2client
 
 Install the necessary Python libraries if you haven't already:
 
-'''pip install gspread oauth2client requests'''
+```pip install gspread oauth2client requests```
+
+Step 3:
+
+Finally, change anything between [ ] in the python files to your own.
