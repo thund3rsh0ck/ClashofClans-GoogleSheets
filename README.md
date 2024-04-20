@@ -36,3 +36,11 @@ Install the necessary Python libraries if you haven't already:
 
 Finally, change anything between `[ ]` in the Python files to your own.
 
+For the Google sheet, create the following tabs:
+Botdata with the following columns:
+```Date	Type	User	Attacked?```
+
+Rosterv2 with the following column headers:
+```Name	Rank	Tag	Donations	Donations Received	Rank in Clan	League```
+
+
