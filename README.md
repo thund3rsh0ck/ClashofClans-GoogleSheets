@@ -30,8 +30,7 @@ Connect Clash of Clans API to Google Sheets for War Stats and Member Roster.
 ### Step 2: Install Dependencies
 
 Install the necessary Python libraries if you haven't already:
-```bash
-pip install gspread oauth2client requests```
+```pip install gspread oauth2client requests```
 
 ### Step 3: Configuration
 
